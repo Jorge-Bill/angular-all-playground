@@ -1,0 +1,21 @@
+/* Master Styles */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  border-radius: 4px;
+  color: white;
+}
+
+:root {
+  --success: rgb(58, 189, 58);
+  --warning: rgb(226, 223, 14);
+  --danger: rgb(207, 13, 13);
+  --details: rgb(162, 13, 207);
+}
+
+/*
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://github.com/ngrx/platform
+*/

@@ -1,0 +1,37 @@
+<div>
+  <button
+    *ngIf="books && books.length>0"
+    class="clear"
+    (click)="clear.emit()"
+    data-test="clear-button"
+  >
+    Clear Collection
+  </button>
+
+  <ul class="book-item" *ngFor="let book of books">
+    <li>
+      <p>{{book.volumeInfo.title}}</p>
+      <p *ngIf="details">{{book.volumeInfo.description}}</p>
+      <span> - {{book.volumeInfo.authors}}</span>
+      <button
+        class="remove"
+        (click)="remove.emit(book.id)"
+        data-test="remove-button"
+      >
+        Remove
+      </button>
+      <button
+        class="details"
+        (click)="show.details()"
+        data-test="details-button"
+      >
+        Details
+      </button>
+    </li>
+  </ul>
+</div>
+
+<!-- 
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://github.com/ngrx/platform
+-->

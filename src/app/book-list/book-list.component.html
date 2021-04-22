@@ -1,0 +1,14 @@
+<ul class="book-item" *ngFor="let book of books">
+  <li>
+    <p>{{book.volumeInfo.title}}</p>
+    <span> - {{book.volumeInfo.authors}}</span>
+    <button class="add" (click)="add.emit(book.id)" data-test="add-button">
+      Bookmark
+    </button>
+  </li>
+</ul>
+
+<!-- 
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://github.com/ngrx/platform
+-->
